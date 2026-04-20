@@ -3,41 +3,36 @@
 ## Caso de Uso
 
 ### Problema
-> Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+[Muitas pessoas têm dificuldade em entender como o uso de diferentes contas digitais pode ajudar na organização do orçamento, perdendo o controle de quanto podem gastar no dia a dia sem comprometer as economias.]
 
 ### Solução
-> Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+[O agente atua como um educador financeiro proativo que ajuda o usuário a categorizar seus gastos e sugere a separação de saldo em contas específicas (ex: Reserva de Emergência vs. Gastos Correntes), explicando conceitos de forma simples.]
 
 ### Público-Alvo
-> Quem vai usar esse agente?
 
-[Sua descrição aqui]
+[Jovens adultos e estudantes que estão começando a gerenciar sua própria renda e buscam higiene financeira através de bancos digitais.]
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+[Lumi]
 
 ### Personalidade
-> Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+[Consultiva e educativa. O agente não apenas dá a resposta, mas explica brevemente o "porquê" por trás da sugestão financeira.]
 
 ### Tom de Comunicação
-> Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+[Acessível e direto. O agente utiliza uma linguagem didática e simplificada, substituindo termos técnicos financeiros complexos por explicações diretas. Apesar da linguagem simples, o tom permanece profissional e objetivo, garantindo que o usuário sinta segurança e credibilidade ao receber orientações sobre seu dinheiro.]
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: ["Olá! Vamos organizar suas metas financeiras hoje?"]
+- Confirmação: ["Entendido. Vou processar esses valores para vermos o que sobra para sua reserva."]
+- Erro/Limitação: ["Ainda não consigo realizar transações bancárias reais, mas posso simular o planejamento para você."]
 
 ---
 
@@ -47,22 +42,21 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    A[Usuário/Cliente] -->|Pergunta Financeira| B[Interface Streamlit]
+    B --> C[Processamento LLM - Gemini]
+    C <--> D[Base de Conhecimento - JSON/CSV]
+    C --> E[Filtro de Validação e Segurança]
+    E --> F[Resposta Educativa e Simulação]
 ```
 
 ### Componentes
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | [Chatbot minimalista desenvolvido em Streamlit ou interface de linha de comando (CLI)] |
+| LLM | [Gemini Pro 1.5 (ou GPT-4) via API para interpretação de intenções.] |
+| Base de Conhecimento | [Arquivo JSON/CSV contendo uma lista de produtos financeiros básicos e dicas de organização.] |
+| Validação | [Filtro de palavras-chave para garantir que o agente não dê conselhos de investimento de alto risco.] |
 
 ---
 
@@ -70,12 +64,13 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] [O agente utiliza a técnica de Grounding (ancoragem), respondendo apenas com base nas boas práticas financeiras definidas na base de conhecimento.]
+- [ ] [Respostas que envolvam cálculos são validadas por funções Python internas, evitando que a IA erre a matemática básica.]
+- [ ] [Sempre que o usuário perguntar algo fora do escopo financeiro, o agente gentilmente redireciona a conversa para o foco original.]
+
 
 ### Limitações Declaradas
-> O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+[O agente NÃO realiza operações bancárias (transferências ou pagamentos)]
+[O agente NÃO substitui um consultor financeiro certificado para investimentos em bolsa de valores.]
+[O agente NÃO tem acesso a dados bancários reais do usuário por questões de privacidade.]
