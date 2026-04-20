@@ -1,42 +1,52 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "nome": "Aforro BAI (ou Similar)",
+    "categoria": "Poupança",
+    "explicacao_simples": "É uma conta onde o seu dinheiro cresce um pouquinho todos os meses com quase risco zero. Ideal para quem está a começar.",
+    "risco": "Muito Baixo",
+    "rentabilidade": "Taxa fixa mensal",
+    "aporte_minimo": 5000.00,
+    "moeda": "AKZ",
+    "indicado_para": "Guardar o dinheiro das contas do mês ou criar o seu primeiro fundo de reserva."
   },
   {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "nome": "Bilhetes do Tesouro (BTs)",
+    "categoria": "Títulos Públicos",
+    "explicacao_simples": "Você empresta dinheiro ao Estado Angolano por um tempo curto (até 1 ano). É uma das formas mais seguras de investir em Angola.",
+    "risco": "Baixo",
+    "rentabilidade": "Taxa definida no leilão do BNA",
+    "aporte_minimo": 100000.00,
+    "moeda": "AKZ",
+    "indicado_para": "Dinheiro que você não vai usar nos próximos 3 a 12 meses."
   },
   {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "nome": "Obrigações do Tesouro (OTs)",
+    "categoria": "Títulos Públicos",
+    "explicacao_simples": "Semelhante aos Bilhetes, mas para prazos mais longos (mais de um ano). Geralmente pagam juros melhores.",
+    "risco": "Baixo",
+    "rentabilidade": "Juros semestrais (Cupões)",
+    "aporte_minimo": 150000.00,
+    "moeda": "AKZ",
+    "indicado_para": "Planos de longo prazo, como a compra do seu carro em 2027."
   },
   {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
-    "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "nome": "Depósito a Prazo (DP)",
+    "categoria": "Renda Fixa Bancária",
+    "explicacao_simples": "Você faz um acordo com o banco para não mexer no dinheiro por um tempo (ex: 90 ou 180 dias) e eles te pagam um juro maior por isso.",
+    "risco": "Baixo",
+    "rentabilidade": "Variável por Banco",
+    "aporte_minimo": 20000.00,
+    "moeda": "AKZ",
+    "indicado_para": "Para quem quer ganhar mais que a poupança normal e tem disciplina para não levantar o dinheiro."
   },
   {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
+    "nome": "Unidades de Participação (Fundos)",
+    "categoria": "Fundos de Investimento",
+    "explicacao_simples": "Várias pessoas juntam dinheiro para investir em imóveis ou grandes empresas em Angola, gerido por especialistas.",
+    "risco": "Médio",
     "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "aporte_minimo": 10000.00,
+    "moeda": "AKZ",
+    "indicado_para": "Diversificar as suas poupanças além dos bancos tradicionais."
   }
 ]
