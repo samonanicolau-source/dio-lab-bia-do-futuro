@@ -16,16 +16,20 @@ src/
 
 ```
 streamlit
-openai
+google-generativeai
+pandas
 python-dotenv
 ```
 
 ## Como Rodar
 
-```bash
-# Instalar dependências
-pip install -r requirements.txt
+```
+1. Clone o repositório.
+2. Crie um arquivo `.env` na raiz com sua `GOOGLE_API_KEY`.
+3. Instale as dependências:
+   ```bash
+   pip install -r src/requirements.txt
 
 # Rodar a aplicação
-streamlit run app.py
+streamlit run src/app.py
 ```
